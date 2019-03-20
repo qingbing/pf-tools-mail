@@ -1,6 +1,6 @@
 {
-    "name": "qingbing/php-mail",
-    "description": "对外邮件的发送工具",
+    "name": "qingbing/pf-tools-mail",
+    "description": "工具——php对外邮件的发送",
     "type": "library",
     "license": "MIT",
     "keywords": [
