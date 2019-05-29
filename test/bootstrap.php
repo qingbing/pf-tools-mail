@@ -13,7 +13,7 @@ $subject = 'phpcorner.net 邮件测试';
 $body = '测试 phpcorner.net 邮件';
 $cc = 'xxx@qq.com';
 $bcc = 'xxx@163.com';
-$mail = \Tools\Email::getInstance();
+$mail = \Tools\Email::getInstance(Config::getInstance('email')->getAll());
 $status = $mail->sendMail($to, $subject, $body, $cc, $bcc);
 if ($status) {
     echo 'success';

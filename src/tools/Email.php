@@ -9,10 +9,10 @@
 namespace Tools;
 
 
-use Abstracts\SingleTon;
+use Abstracts\Component;
 use Helper\Exception;
 
-class Email extends SingleTon
+class Email extends Component
 {
     /* @var string Smtp host, eg: smtp.163.com */
     public $smtp_host;
@@ -54,8 +54,6 @@ class Email extends SingleTon
      */
     public function init()
     {
-        $config = \Config::getInstance('email')->getAll();
-        $this->configure($config);
         // Check the from mail format.
         if (preg_match('#^(.*)<((.*)@(.*))>$#', $this->mail_addr, $matches)) {
             $mail_addr = $matches[2];
